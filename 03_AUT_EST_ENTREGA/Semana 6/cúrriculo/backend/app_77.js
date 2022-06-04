@@ -10,3 +10,16 @@ const app = express();
 const DBPATH = 'sophia.db';
 
 app.use(express.static)
+
+
+app.get('/sophia', (req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Access-Control-Allow-Origin', '*'); 
+
+    var db = new sqlite3.Database(DBPATH); 
+
+    db.close(); 
+});
+
+
+
