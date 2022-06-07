@@ -9,17 +9,28 @@ const sqlite3 = require('sqlite3').verbose();
 const app = express();
 const DBPATH = 'sophia.db';
 
-app.use(express.static)
+app.use(express.json());
+
+app.use(express.static("../frontend"))
 
 
-app.get('/sophia', (req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Access-Control-Allow-Origin', '*'); 
+app.get('/sophia', (request, response) => {
+    response.statusCode = 200;
+    response.setHeader('Access-Control-Allow-Origin', '*'); 
 
-    var db = new sqlite3.Database(DBPATH); 
-
-    db.close(); 
+    var db = new sqlite3.Database(DBPATH);
+    var sql = "SELECT * FROM soso"; 
+    db.all(sql, [],  (err, rows ) => {
+        if (err) {
+            throw err;
+        }
+        response.json(rows);
+    });
+    db.close(); // Fecha o banco
 });
+ 
 
 
-
+app.listen(port, hostname, () => {
+    console.log(`BD server running at http://${hostname}:${port}/`);
+  });
