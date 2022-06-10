@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="app_77.js"></script>
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>meu currículo</title>
+<style>
+    body {
+        background-color: rgb(230, 194, 216);
+        font: normal 20pt Pacifico;
+    }
+
+
+    #soso{
+        object-fit: cover;
+        
+
+    }
+   
+</style>
+
+</head>
+<body>
+
+
+    <div class="row justify-content-start" style="height:450px;">
+    <h1> Sophia de Oliveira Tosar</h1>
+
+<div class="container">
+    <div class="row align-items-end justify-content-center" style="height:450px;">
+        <div class="col-4">
+          
+        </div>
+        <div class="col">
+            <p> <h3> Informações Pessoais </h3></p>
+            <ul>Telefone: (11) 974824447</ul>
+            <ul>Email: sophia.tosar@sou.inteli.edu.br</ul>
+            <ul> Endereço:Rua Dom Alberione</ul>
+            <ul>Nacionalidade: brasileira </ul>
+            <ul>Idade: 18 anos </ul>
+          </div> 
+           
+        <div class ="row justify-content-start" style="margin-top: 100px;">
+            <div class ="col-4" </div>
+            <p> <h3>Formação Acadêmica:</h3></p>
+            <ul>Ensino superior: Bacharelado em Engenharia de Software no Instituto de Tecnologia e Liderança </ul>
+            <ul>Ensino Médio: Colégio Vital Brazil </ul> 
+        </div>
+     
+
+        <div class ="row justify-content-start"
+            <div class ="col-4" </div>
+            <p> <h3>Habilidades</h3></p>
+            <input type="button" id="1" value="Inglês avançado"/>
+            <input type="button" id="2" value="espanhol avançado"/>
+            <input type= "button" id="trocar" value="Trocar" onclick="Trocar()"/>
+        </div>
+    </div>
+     
+    <button onclick="mostraSophia('currículo sophia')">clique aqui</button>
+    <script src="currículo.js"></script>
+
+
+    <div id="getDB" class="sections">
+        <h3>Resultado GET FROM DB</h3>
+        Resultados obtidos com a requisição GET no nosso banco:
+    </div>
+    <button onclick="TestGETDB()" class="button-get-db">GET FROM DB</button>
+
+</body>
+</html>
